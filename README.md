@@ -9,7 +9,8 @@ A Python web application built with [Streamlit](https://streamlit.io/), [LangCha
 - **Powered by AI**: Uses LangChain and the Deepscaler model (via Ollama) for efficient summarization.
 
 ## Demo
-*(Add a GIF or screenshot here if you deploy the app and capture its output!)*
+![image](https://github.com/user-attachments/assets/7cf9bfe0-b3e1-411d-aab6-b37deec974ac)
+
 
 ## Prerequisites
 - **Python 3.8+**
@@ -22,3 +23,44 @@ A Python web application built with [Streamlit](https://streamlit.io/), [LangCha
    ```bash
    git clone https://github.com/your-username/youtube-transcript-summarizer.git
    cd youtube-transcript-summarizer
+
+2. **Install Dependencies**:
+```bash
+
+pip install -r requirements.txt
+
+3. **Set Up Ollama**:
+
+    Install Ollama: Follow instructions at ollama.com.
+    Start the Ollama server:
+    bash
+
+ollama serve
+
+Pull the Deepscaler model:
+bash
+
+        ollama pull deepscaler
+
+    Get a SearchAPI.io API Key:
+        Sign up at searchapi.io.
+        Copy your API key for use in the app.
+
+4. **Usage**
+
+    Run the App:
+    bash
+
+streamlit run app.py
+
+This opens the app in your browser at http://localhost:8501.
+Interact with the App:
+
+    YouTube Video URL: Enter a valid URL (e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+    SearchAPI.io API Key: Paste your API key.
+    Click Summarize to fetch the transcript and see the summary stream in real-time.
+
+Example:
+
+    Input: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    Output: A summary of the video’s lyrics or spoken content (if transcripts are available).
